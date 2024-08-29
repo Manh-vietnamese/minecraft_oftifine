@@ -1,0 +1,124 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "common_toggles_brewing",
+
+  "toggle_panel": {
+    "type": "panel",
+    "$tab_size|default": [ "100%", "100%" ],
+    "$sound_name|default": "random.click",
+    "size": [ "100%", "100%" ],
+    "$radio_toggle_group": true,
+    "$toggle_focus_enabled": true,
+    "$is_back_button|default": false,
+    "$has_double_click_function|default": false,
+    "$binding_type": "global",
+    "$binding_condition": "once",
+
+    "$is_custom_button|default": false,
+    "$custom_from_button_id|default": "",
+    "$custom_to_button_id|default": "",
+    "$custom_mapping_type|default": "global",
+    "$custom_scope|default": "",
+
+    "$unchecked_control": "common.empty_panel",
+    "$checked_control": "common.empty_panel",
+    "$unchecked_hover_control": "common.empty_panel",
+    "$checked_hover_control": "common.empty_panel",
+
+    "$unchecked_locked_control": "common.empty_panel",
+    "$unchecked_locked_hover_control": "common.empty_panel",
+    "$checked_locked_control": "common.empty_panel",
+    "$checked_locked_hover_control": "common.empty_panel",
+    "controls": [
+      {
+        "$tab_view_binding_name@common.toggle": {
+          "sound_name": "$sound_name",
+          "size": "$tab_size",
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.menu_select",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.menu_ok",
+              "mapping_type": "focused"
+            },
+            {
+              "ignored": "(not $is_back_button)",
+              "from_button_id": "button.menu_cancel",
+              "to_button_id": "button.menu_select",
+              "mapping_type": "global"
+            },
+            {
+              "ignored": "(not $is_custom_button)",
+              "from_button_id": "$custom_from_button_id",
+              "to_button_id": "$custom_to_button_id",
+              "mapping_type": "$custom_mapping_type",
+              "scope": "$custom_scope"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Black Button ////*/
+
+  "black_button_label@common_dx.global_label": {
+    "text": "$button_text",
+    "offset": "$text_offset",
+    "shadow": false,
+    "color": "$text_color",
+    "size": [ "default", 10 ],
+    "max_size": "$button_label_max_size",
+    "$button_label_max_size|default": [ "100%+2px", 10 ]
+  },
+  
+  "black_button_default": {
+    "type": "image",
+    "size": "$black_button_size",
+    "$black_button_size|default": [ "100%", "100%" ],
+    "texture": "textures/brewing_guide_ui/option_controls/black_button_bg",
+    "$text_color": [ 1.0, 1.0, 1.0 ],
+    "$text_offset|default": [ 0, 0 ],
+    "$button_text|default": "",
+    "$button_content|default": "common_toggles_brewing.black_button_label",
+    "controls": [
+      {
+        "button_content@$button_content": {
+          "layer": 4,
+          "anchor_from": "center",
+          "anchor_to": "center"
+        }
+      }
+    ]
+  },
+
+  "black_button_hover@common_toggles_brewing.black_button_default": {
+    "texture": "textures/brewing_guide_ui/option_controls/black_button_bg_hover",
+    "$text_color": [ 1.0, 1.0, 1.0 ]
+  },
+
+  "black_button_checked_top@common_toggles_brewing.black_button_default": {
+    "texture": "textures/brewing_guide_ui/option_controls/black_button_bg_checked_top",
+    "$text_color": [ 1.0, 1.0, 1.0 ]
+  },
+
+  "black_button_checked_top_hover@common_toggles_brewing.black_button_default": {
+    "texture": "textures/brewing_guide_ui/option_controls/black_button_bg_checked_top_hover",
+    "$text_color": [ 1.0, 1.0, 1.0 ]
+  },
+
+  "black_button_checked_left@common_toggles_brewing.black_button_default": {
+    "texture": "textures/brewing_guide_ui/option_controls/black_button_bg_checked_left",
+    "$text_color": [ 1.0, 1.0, 1.0 ]
+  },
+
+  "black_button_checked_left_hover@common_toggles_brewing.black_button_default": {
+    "texture": "textures/brewing_guide_ui/option_controls/black_button_bg_checked_left_hover",
+    "$text_color": [ 1.0, 1.0, 1.0 ]
+  }
+}

@@ -1,0 +1,67 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "brewing_stand_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": { "tab_toggles_mode_panel@CrisXolt_Brewing_Guide.tab_toggles_mode_panel": { } }
+      }
+    ]
+  },
+
+  "brewing_stand_stack_panel": {
+    "type": "stack_panel",
+    "size": [ "100%c", 166 ],
+    "orientation": "horizontal",
+    "controls": [
+      { 
+        "brewing_guide_panel@CrisXolt_Brewing_Guide.brewing_guide_panel": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "recipe_layout_toggle",
+              "source_property_name": "(#toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      { 
+        "center_fold@CrisXolt_Brewing_Guide_textures.center_fold": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "recipe_layout_toggle",
+              "source_property_name": "(#toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      { "brewing_stand_panel@brewing_stand_old_dx.brewing_stand_panel": { } }
+    ]
+  },
+
+  "main_screen_content": {
+    "type": "panel",
+    "$slot_selected_texture": "",
+    "$item_lock_cell_size": [ "100%-2px", "100%-2px" ],
+    "$item_lock_cell_texture": "textures/uidx/highlight/cell_image_lock",
+    "controls": [
+      {
+        "item_number_scroll_panel@crafting.scroll_panel": {
+          "ignored": true,
+          "size": [ 70, "100%" ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "$scrolling_content": "item_aux_test.scroll_grid_panel"
+        }
+      },
+      { "inventory_selected_icon_button@selected_icon_dx.inventory_selected_icon_button": {} },
+      { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
+      { "brewing_stand_stack_panel@brewing_stand_old_dx.brewing_stand_stack_panel": { } }
+    ]
+  }
+}

@@ -1,0 +1,192 @@
+/*File modified by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  /*//// Panel ////*/
+
+  "header": {
+    "type": "panel",
+    "size": [ "100%", 28 ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      {
+        "header_background": {
+          "type": "image",
+          "texture": "textures/ui/header_bar"
+        }
+      },
+      { "legacy_pocket_close_button@common.legacy_pocket_close_button": {} },
+      {
+        "label_with_help_stack_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", "100%" ],
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "controls": [
+            {
+              "help_panel": {
+                "type": "panel",
+                "size": [ "50%", "100%" ],
+                "controls": [
+                  {
+                    "tab_toggles_navigation_panel": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "offset": [ -4, 3 ],
+                      "size": [ "100%c", 20 ],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "layer": 10,
+                      "controls": [
+                        { 
+                          "panel_0": {
+                            "type": "panel",
+                            "size": [ 23, 20 ],
+                            "controls": [
+                              { 
+                                "normal_tab_new@CrisXolt_Brewing_Guide.top_tab_new": {
+                                  "$tab_view_binding_name": "inventory_tab_toggle",
+                                  "$toggle_default_state": true,
+                                  "$toggle_group_forced_index": 0
+                                }
+                              },
+                              { "inventory_tab@CrisXolt_Brewing_Guide.tab_icon_new": { "$item_control": "CrisXolt_Brewing_Guide.inventory_tab_icon" } }
+                            ]
+                          }
+                        },
+                        { "padding_0": { "type": "panel", "size": [ 8, 1 ] } },
+                        { 
+                          "panel_1": {
+                            "type": "panel",
+                            "size": [ 23, 20 ],
+                            "controls": [
+                              { "normal_tab_new@CrisXolt_Brewing_Guide.top_tab_new": { "$tab_view_binding_name": "normal_tab_toggle", "$toggle_group_forced_index": 1 } },
+                              { "normal_tab@CrisXolt_Brewing_Guide.tab_icon_new": { "$item_control": "CrisXolt_Brewing_Guide.normal_tab_icon" } }
+                            ]
+                          }
+                        },
+                        { "padding_1": { "type": "panel", "size": [ 8, 1 ] } },
+                        { 
+                          "panel_2": {
+                            "type": "panel",
+                            "size": [ 23, 20 ],
+                            "controls": [
+                              { "splash_tab_new@CrisXolt_Brewing_Guide.top_tab_new": { "$tab_view_binding_name": "splash_tab_toggle", "$toggle_group_forced_index": 2 } },
+                              { "splash_tab@CrisXolt_Brewing_Guide.tab_icon_new": { "$item_control": "CrisXolt_Brewing_Guide.splash_tab_icon" } }
+                            ]
+                          }
+                        },
+                        { "padding_2": { "type": "panel", "size": [ 8, 1 ] } },
+                        { 
+                          "panel_3": {
+                            "type": "panel",
+                            "size": [ 23, 20 ],
+                            "controls": [
+                              { "lingering_tab_new@CrisXolt_Brewing_Guide.top_tab_new": { "$tab_view_binding_name": "lingering_tab_toggle", "$toggle_group_forced_index": 3 } },
+                              { "lingering_tab@CrisXolt_Brewing_Guide.tab_icon_new": { "$item_control": "CrisXolt_Brewing_Guide.lingering_tab_icon" } }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "panel": {
+                "type": "panel",
+                "size": [ "fill", "100%" ],
+                "controls": [
+                  {
+                    "title_label@brewing_stand_pocket.generic_label": {
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "text": "$container_title",
+                      "layer": 1
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "inventory_and_brewing_panel/inventory_half_screen": {
+    "controls": [
+      {
+        "brewing_guide_panel@common.root_panel": {
+          "size": [ "100%-5px", "100%-5px" ],
+          "offset": [ "5px", "2px" ],
+          "anchor_to": "top_left",
+          "anchor_from": "top_left",
+          "layer": 5,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "inventory_tab_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            { 
+              "scroll_bg@common.cell_image": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "size": [ "100%-13px", "100%" ],
+                "offset": [ 0, 0 ],
+                "layer": 4
+              }
+            },
+            {
+              "scroll_track@common.cell_image": {
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "size": [ 12, "100%" ],
+                "offset": [ 0, 0 ],
+                "layer": 4
+              }
+            },
+            {
+              "scrolling_panel@common_scroll_brewing.scrolling_panel": {
+                "$scroll_box_image_control": "CrisXolt_Brewing_Guide.scroll_box_active",
+                "$scroll_track_image_control": "common.empty_panel",
+      
+                "$scroll_bar_left_padding_size": [ 0, 0 ],
+                "$scroll_bar_right_padding_size": [ 0, 0 ],
+      
+                "size": [ "100%-1px", "100%-2px" ],
+                "offset": [ 1, 1 ],
+                "layer": 6,
+                "$scroll_size": [ 11, "100%" ],
+                "$scroll_view_port_size": [ "100%-14px", "100%" ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$scrolling_pane_size": [ "100%", "100%" ],
+                "$scrolling_pane_offset": [ 0, 0 ],
+                "$scrolling_content": "CrisXolt_Brewing_Guide.scroll_stack_panel"
+              }
+            }
+          ]
+        }
+      },
+      { 
+        "inventory_content@brewing_stand_pocket.inventory_content": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "inventory_tab_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

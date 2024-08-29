@@ -1,0 +1,163 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "brewing_stand_pocket_dx",
+
+  "left_navigation_tabs": {
+    "type": "stack_panel",
+    "size": [ 32, "100%" ],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "offset": [ 0, 0 ],
+    "controls": [
+      { 
+        "buttons_panel": {
+          "type": "panel",
+          "size": [ 32, 32 ],
+          "controls": [
+            { "tab_toggles_left_navigation_panel@CrisXolt_Brewing_Guide.tab_toggles_left_navigation_panel": { } }
+          ]
+        }
+      },
+      { "fill_panel": { "type": "panel", "size": [ 1, "fill" ] } },
+      {
+        "inventory_tab_panel": {
+          "type": "panel",
+          "size": [ 32, 32 ],
+          "controls": [
+            { 
+              "inventory_tab@container_panel_pocket_dx.decorated_tab_panel_template": {
+                "$tab_selected_texture": "recipe_book_pocket_textures_dx.tab_left_selected_bottom",
+                "$tab_icon": "recipe_book_pocket_navigation_tabs_dx.survival_inventory_icon"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "invnetory_left_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      { "background@inventory_pocket_textures_dx.left_panel_background": { "layer": 1 } },
+      {
+        "inventory": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "inventory_tab_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            { "content@container_panel_pocket_dx.pocket_container_panel_template": { "layer": 11 } }
+          ]
+        }
+      },
+      {
+        "brewing": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "inventory_tab_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "normal_label@label_dx.global_label": {
+                "text": "itemGroup.name.potion",
+                "color": "$vdx_container_title_text_color",
+                "size": [ "default", 10 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "text_alignment": "center",
+                "offset": [ 0, 10 ],
+                "shadow": false,
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "normal_tab_toggle",
+                    "source_property_name": "(#toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  { "label_bg_image@CrisXolt_rgb_dialog_bg.label_bg_image": { "size": [ "100%+6px", 17 ], "offset": [ 0, -1 ], "layer": -1 } }
+                ]
+              }
+            },
+            {
+              "splash_label@label_dx.global_label": {
+                "text": "itemGroup.name.splashPotion",
+                "color": "$vdx_container_title_text_color",
+                "size": [ "default", 10 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "text_alignment": "center",
+                "offset": [ 0, 10 ],
+                "shadow": false,
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "splash_tab_toggle",
+                    "source_property_name": "(#toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  { "label_bg_image@CrisXolt_rgb_dialog_bg.label_bg_image": { "size": [ "100%+6px", 17 ], "offset": [ 0, -1 ], "layer": -1 } }
+                ]
+              }
+            },
+            {
+              "lingering_label@label_dx.global_label": {
+                "text": "itemGroup.name.lingeringPotion",
+                "color": "$vdx_container_title_text_color",
+                "size": [ "default", 10 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "text_alignment": "center",
+                "offset": [ 0, 10 ],
+                "shadow": false,
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "lingering_tab_toggle",
+                    "source_property_name": "(#toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  { "label_bg_image@CrisXolt_rgb_dialog_bg.label_bg_image": { "size": [ "100%+6px", 17 ], "offset": [ 0, -1 ], "layer": -1 } }
+                ]
+              }
+            },
+            {
+              "main@scroll_dx.contained_scrolling_panel": {
+                "anchor_to": "top_left",
+                "anchor_from": "top_left",
+                "offset": [ 7, 27 ],
+                "size": [ "100%-14px", "100%-34px" ],
+                "$scroll_size": [ 14, "100%" ],
+                "$scroll_view_port_size": [ "100%-2px", "100%-2px" ],
+                "$scroll_view_port_offset": [ 1, 1 ],
+                "$scrolling_pane_size": [ "100%", "100%" ],
+                "$scroll_box_image_control": "recipe_book_pocket_textures_dx.scroller_left",
+                "$scroll_background_image_control": "inventory_pocket_textures_dx.scroll_content_bg",
+                "$scroll_track_image_control": "inventory_pocket_textures_dx.scroll_track",
+                "$scrolling_content": "CrisXolt_Brewing_Guide.scroll_stack_panel"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

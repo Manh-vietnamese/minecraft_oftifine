@@ -1,0 +1,112 @@
+{
+  "namespace": "Bolt",
+  "hotbar_grid": {
+    "type": "input_panel",
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "size": [178, 55],
+    "alpha": 0.7,
+    "controls": [
+      {
+        "@Bolt.hotbar": {}
+      }
+    ]
+  },
+  "hotbar": {
+    "type": "panel",
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "clips_children": true,
+    "controls": [
+      {
+        "Inventory_Hud": {
+          "type": "stack_panel",
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "offset": [0, "-2%"],
+          "orientation": "vertical",
+          "controls": [
+            {"@Bolt.hotbar_grid1": {}}
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "hotbar_grid1": {
+    "type": "panel",
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "size": [178, 52],
+    "clips_children": true,
+    "controls": [
+      {
+        "Inventory_Box": {
+          "type": "grid",
+          "collection_name": "hotbar_items",
+          "grid_dimensions": [9, 4],
+          "grid_item_template": "Bolt.hotbar_grid_item",
+          "anchor_from": "left_middle", // INVENTORY 3X3 LEFT BOX
+          "anchor_to": "left_middle", // INVENTORY 3X3 LEFT BOX
+          "offset": [-1, -10],
+          "size": ["162px", "54px + 18px"]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "hotbar_grid_item": {
+    "type": "panel",
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "$durability_bar_required": true,
+    "$item_collection_name": "hotbar_items",
+    "$stack_count_required": true,
+    "controls": [
+      {"stack_count_label_mods@common.stack_count_label": {"layer": 7}},
+      {"items_render_mods@common.item_renderer": {"layer": 6, "size": [16, 16]}},
+      {"Bolt_Background@Bolt.Bolt_Background": {}}
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "Bolt_Background": {
+    "type": "panel",
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "controls": [
+      {
+        "Bolt_background": {
+          "type": "image",
+          "texture": "ui/Bolt/inventory/hud",
+          "size": [16.7, 16.7],
+          "alpha": 0.59,
+          "$durability_bar_required": true,
+          "$item_collection_name": "hotbar_items",
+          "$stack_count_required": true
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
+}

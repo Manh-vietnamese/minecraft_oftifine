@@ -1,0 +1,37 @@
+{
+  "namespace": "hud",
+  "hud_content": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {"Bolt@Bolt.hotbar_grid": {}}
+        ]
+      }
+    ]
+  },
+  
+  "Inventory_Hud": {
+    "type": "panel",
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "size": ["50%", "100%"],
+    "controls": [
+      {
+        "label": {
+          "type": "label",
+          "size": ["default", 10],
+          "max_size": ["100%", "100%"],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "bindings": [
+            {
+              "binding_name": "#inventory_hud"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

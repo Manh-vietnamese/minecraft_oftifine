@@ -1,0 +1,99 @@
+{
+  "namespace": "CrisXolt_brewing_text_animation",
+
+  "mundane_ingreditne_text_stack_panel": {
+    "type": "stack_panel",
+    "size": [ 400, 600 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": "@CrisXolt_brewing_text_animation.cycle_01",
+    "controls": [
+      { "item_01@CrisXolt_brewing_text_animation.main_hover_text_panel": { "$hover_panel_text": "item.redstone.name" } },
+      { "item_02@CrisXolt_brewing_text_animation.main_hover_text_panel": { "$hover_panel_text": "item.spider_eye.name" } },
+      { "item_03@CrisXolt_brewing_text_animation.main_hover_text_panel": { "$hover_panel_text": "item.ghast_tear.name" } },
+      { "item_04@CrisXolt_brewing_text_animation.main_hover_text_panel": { "$hover_panel_text": "item.rabbit_foot.name" } },
+      { "item_05@CrisXolt_brewing_text_animation.main_hover_text_panel": { "$hover_panel_text": "item.blaze_powder.name" } },
+      { "item_06@CrisXolt_brewing_text_animation.main_hover_text_panel": { "$hover_panel_text": "item.speckled_melon.name" } },
+      { "item_07@CrisXolt_brewing_text_animation.main_hover_text_panel": { "$hover_panel_text": "item.sugar.name" } },
+      { "item_08@CrisXolt_brewing_text_animation.main_hover_text_panel": { "$hover_panel_text": "item.magma_cream.name" } },
+      { "item_09@CrisXolt_brewing_text_animation.main_hover_text_panel": { "$hover_panel_text": "item.breeze_rod.name" } },
+      { "item_10@CrisXolt_brewing_text_animation.main_hover_text_panel": { "$hover_panel_text": "tile.web.name" } },
+      { "item_11@CrisXolt_brewing_text_animation.main_hover_text_panel": { "$hover_panel_text": "tile.slime.name" } },
+      { "item_12@CrisXolt_brewing_text_animation.main_hover_text_panel": { "$hover_panel_text": "tile.stone.stone.name" } }
+    ]
+  },
+
+  "main_hover_text_panel": {
+    "type": "panel",
+    "size": [ 400, 20 ],
+    "controls": [
+      {
+        "hover@CrisXolt_Brewing_Guide_common.hover_text_image": {
+          "clips_children": true,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 1, -1 ]
+        }
+      }
+    ]
+  },
+
+  "hover_text_button": {
+    "type": "button",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "locked_control": "",
+    "layer": -10,
+    "size": [ 1, 1 ],
+    "offset": [ 10000, 10000 ],
+    "follows_cursor": true,
+    "consume_hover_events": false,
+    "always_handle_pointer": true,
+    "focus_enabled": false,
+    "focus_magnet_enabled": false,
+    "controls": [
+      {
+        "hover_panel@CrisXolt_brewing_text_animation.hover_panel": { 
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 9, -9 ]
+        }
+      }
+    ]
+  },
+  
+  "hover_panel": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ 400, 15 ],
+    "offset": [ 17, 0 ],
+    "allow_clipping": false,
+    "clips_children": true,
+    "controls": [
+      { "stack_panel@CrisXolt_brewing_text_animation.mundane_ingreditne_text_stack_panel": { } }
+    ]
+  },
+
+  "offset_base": {
+    "anim_type": "offset",
+    "easing": "linear",
+    "duration": 1,
+    "next": "$next_frame", 
+    "from": "$uv_frame",
+    "to": "$uv_frame"
+  },    
+
+  "cycle_01@CrisXolt_brewing_text_animation.offset_base": { "$uv_frame": [ 0, 0     ], "$next_frame": "@CrisXolt_brewing_text_animation.cycle_02" },
+  "cycle_02@CrisXolt_brewing_text_animation.offset_base": { "$uv_frame": [ 0, -20   ], "$next_frame": "@CrisXolt_brewing_text_animation.cycle_03" },
+  "cycle_03@CrisXolt_brewing_text_animation.offset_base": { "$uv_frame": [ 0, -40   ], "$next_frame": "@CrisXolt_brewing_text_animation.cycle_04" },
+  "cycle_04@CrisXolt_brewing_text_animation.offset_base": { "$uv_frame": [ 0, -60   ], "$next_frame": "@CrisXolt_brewing_text_animation.cycle_05" },
+  "cycle_05@CrisXolt_brewing_text_animation.offset_base": { "$uv_frame": [ 0, -80   ], "$next_frame": "@CrisXolt_brewing_text_animation.cycle_06" },
+  "cycle_06@CrisXolt_brewing_text_animation.offset_base": { "$uv_frame": [ 0, -100  ], "$next_frame": "@CrisXolt_brewing_text_animation.cycle_07" },
+  "cycle_07@CrisXolt_brewing_text_animation.offset_base": { "$uv_frame": [ 0, -120  ], "$next_frame": "@CrisXolt_brewing_text_animation.cycle_08" },
+  "cycle_08@CrisXolt_brewing_text_animation.offset_base": { "$uv_frame": [ 0, -140  ], "$next_frame": "@CrisXolt_brewing_text_animation.cycle_09" },
+  "cycle_09@CrisXolt_brewing_text_animation.offset_base": { "$uv_frame": [ 0, -160  ], "$next_frame": "@CrisXolt_brewing_text_animation.cycle_10" },
+  "cycle_10@CrisXolt_brewing_text_animation.offset_base": { "$uv_frame": [ 0, -180  ], "$next_frame": "@CrisXolt_brewing_text_animation.cycle_11" },
+  "cycle_11@CrisXolt_brewing_text_animation.offset_base": { "$uv_frame": [ 0, -200  ], "$next_frame": "@CrisXolt_brewing_text_animation.cycle_12" },
+  "cycle_12@CrisXolt_brewing_text_animation.offset_base": { "$uv_frame": [ 0, -220  ], "$next_frame": "@CrisXolt_brewing_text_animation.cycle_01" }
+}

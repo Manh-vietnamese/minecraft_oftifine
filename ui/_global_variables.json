@@ -1,0 +1,15 @@
+{
+  /* Brewing Guide UI Tweaks */
+
+  /* (c) CrisXolt. Don't use any code without authorization! */
+
+  ////*/ Other Resource Packs Compatibility /*////
+  /* By @agentms_*/
+  "$is_java_aspects": false,
+  "$is_java_aspects_fidelity": false,
+  "$is_java_aspects_performance": false,
+
+  "$is_console_aspects": false,
+  "$is_console_aspects_fidelity": false,
+  "$is_console_aspects_performance": false
+}

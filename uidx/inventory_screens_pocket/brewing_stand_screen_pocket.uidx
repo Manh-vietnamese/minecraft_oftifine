@@ -1,0 +1,166 @@
+{
+  "brewing_stand_panel/main_stack_panel/left_tabs": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": { "tab_toggles_left_navigation_panel@CrisXolt_Brewing_Guide.tab_toggles_left_navigation_panel": { } }
+      }
+    ]
+  },
+
+  "brewing_stand_panel/main_stack_panel/left_panel": {
+    "controls": [
+      { "dialog_bg@CrisXolt_anm_inventory_pocket.dialog_bg": { } },
+      { "dialog_bg_left_overlay@CrisXolt_anm_inventory_pocket.dialog_bg_left_overlay": { } },
+      {
+        "inventory": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "inventory_tab_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "inventory_label@common_dx.global_label": {
+                "text": "container.inventory",
+                "color": "$vdx_container_title_text_color",
+                "size": [ "default", 10 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "text_alignment": "center",
+                "offset": [ 0, 10 ],
+                "shadow": false,
+                "controls": [
+                  { "label_bg_image@CrisXolt_anm_ui.label_bg_image": { "size": [ "100%+6px", 17 ], "offset": [ 0, -1 ], "layer": -1 } }
+                ]
+              }
+            },
+            {
+              "scrolling_panel@crafting.scroll_panel": {
+                "size": [ "100%-14px", "100%-34px" ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 7, 27 ],
+                "layer": 6,
+                "$scroll_background_image_control": "inventory_pocket_dx.scroll_content_bg",
+                "$scroll_box_mouse_image_control": "pocket_containers_dx.scroll_box_active_left",
+                "$scroll_track_image_control": "inventory_pocket_dx.scroll_track",
+                "$scroll_bar_left_padding_size": [ 3, 0 ],
+                "$scroll_bar_right_padding_size": [ 0, 0 ],
+                "$scroll_size": [ 15, "100%" ],
+                "$scrolling_content": "pocket_containers_dx.container_inventory_grid",
+                "$container_size": 36,
+                "$pane_collection": "combined_hotbar_and_inventory_items"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "brewing": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "inventory_tab_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "normal_label@common_dx.global_label": {
+                "text": "itemGroup.name.potion",
+                "color": "$vdx_container_title_text_color",
+                "size": [ "default", 10 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "text_alignment": "center",
+                "offset": [ 0, 10 ],
+                "shadow": false,
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "normal_tab_toggle",
+                    "source_property_name": "(#toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  { "label_bg_image@CrisXolt_anm_ui.label_bg_image": { "size": [ "100%+6px", 17 ], "offset": [ 0, -1 ], "layer": -1 } }
+                ]
+              }
+            },
+            {
+              "splash_label@common_dx.global_label": {
+                "text": "itemGroup.name.splashPotion",
+                "color": "$vdx_container_title_text_color",
+                "size": [ "default", 10 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "text_alignment": "center",
+                "offset": [ 0, 10 ],
+                "shadow": false,
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "splash_tab_toggle",
+                    "source_property_name": "(#toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  { "label_bg_image@CrisXolt_anm_ui.label_bg_image": { "size": [ "100%+6px", 17 ], "offset": [ 0, -1 ], "layer": -1 } }
+                ]
+              }
+            },
+            {
+              "lingering_label@common_dx.global_label": {
+                "text": "itemGroup.name.lingeringPotion",
+                "color": "$vdx_container_title_text_color",
+                "size": [ "default", 10 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "text_alignment": "center",
+                "offset": [ 0, 10 ],
+                "shadow": false,
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "lingering_tab_toggle",
+                    "source_property_name": "(#toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  { "label_bg_image@CrisXolt_anm_ui.label_bg_image": { "size": [ "100%+6px", 17 ], "offset": [ 0, -1 ], "layer": -1 } }
+                ]
+              }
+            },
+            {
+              "recipe_brewing_scrolling_panel@crafting.scroll_panel": {
+                "size": [ "100%-14px", "100%-34px" ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 7, 27 ],
+                "layer": 6,
+                "$scroll_background_image_control": "inventory_pocket_dx.scroll_content_bg",
+                "$scroll_box_mouse_image_control": "pocket_containers_dx.scroll_box_active_left",
+                "$scroll_track_image_control": "inventory_pocket_dx.scroll_track",
+                "$scroll_bar_left_padding_size": [ 3, 0 ],
+                "$scroll_bar_right_padding_size": [ 0, 0 ],
+                "$scroll_size": [ 15, "100%" ],
+                "$scrolling_content": "CrisXolt_Brewing_Guide.scroll_stack_panel"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

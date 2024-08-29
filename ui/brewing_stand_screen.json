@@ -1,0 +1,87 @@
+/*File modified by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "brewing_stand_pictogram": {
+    "type": "panel",
+    "size": [ "40%", "80%" ],
+    "controls": [
+      { "brewing_input_slot@brewing_stand.brewing_input_slot": { "layer": 2 } },
+      { "brewing_output_slots@brewing_stand.brewing_output_slots": { "layer": 2 } },
+      { "brewing_fuel_slot@brewing_stand.brewing_fuel_slot": { "layer": 2 } },
+      { "brewing_arrow_empty_image@brewing_stand.brewing_arrow_empty_image": { "layer": 3 } },
+      { "brewing_arrow_full_image@brewing_stand.brewing_arrow_full_image": { "layer": 6 } },
+      { "brewing_fuel_bar_empty_image@brewing_stand.brewing_fuel_bar_empty_image": { "layer": 3 } },
+      { "brewing_fuel_bar_full_image@brewing_stand.brewing_fuel_bar_full_image": { "layer": 6 } },
+      { "bubbles_empty_image@brewing_stand.bubbles_empty_image": { "layer": 3 } },
+      { "bubbles_full_image@brewing_stand.bubbles_full_image": { "layer": 6 } },
+      { "brewing_fuel_pipes@brewing_stand.brewing_fuel_pipes": { "layer": 5 } },
+      { "brewing_pipes@brewing_stand.brewing_pipes": { "layer": 5 } }
+    ]
+  },
+
+  "brewing_stand_with_help_stack_panel": {
+    "type": "stack_panel",
+    "size": [ "100%c", 166 ],
+    "orientation": "horizontal",
+    "controls": [
+      { 
+        "brewing_guide_panel@CrisXolt_Brewing_Guide.brewing_guide_panel": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "brewing_recipe_layout_toggle",
+              "source_property_name": "(#toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      { 
+        "center_fold@CrisXolt_Brewing_Guide_textures.center_fold": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "brewing_recipe_layout_toggle",
+              "source_property_name": "(#toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "root_panel@common.root_panel": {
+          "layer": 1,
+          "controls": [
+            { "tab_toggles_mode_panel@CrisXolt_Brewing_Guide.tab_toggles_mode_panel": { } },
+            { "common_panel@common.common_panel": {} },
+            {
+              "furnace_screen_inventory": {
+                "type": "panel",
+                "layer": 5,
+                "controls": [
+                  { "brewing_panel_top_half@brewing_stand.brewing_panel_top_half": {} },
+                  { "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {} },
+                  { "hotbar_grid@common.hotbar_grid_template": {} },
+                  { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} }
+                ]
+              }
+            },
+            { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
+            { "gamepad_cursor@common.gamepad_cursor_button": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  "brewing_stand_panel": {
+    "type": "panel",
+    "controls": [
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
+      { "flying_item_renderer@common.flying_item_renderer": { "layer": 11 } },
+      { "selected_item_details_factory@common.selected_item_details_factory": {} },
+      { "item_lock_notification_factory@common.item_lock_notification_factory": {} },
+      { "brewing_stand_with_help_stack_panel@brewing_stand.brewing_stand_with_help_stack_panel": {} }
+    ]
+  }
+}

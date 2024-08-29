@@ -1,0 +1,59 @@
+/*File made by @CrisXolt.
+//(c) Don't use any UI data design without permission!*/
+{
+  "namespace": "brewing_stand_desktop_dx",
+
+  "top_half_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": { "tab_toggles_mode_panel@CrisXolt_Brewing_Guide.tab_toggles_mode_panel": { } }
+      }
+    ]
+  },
+
+  "brewing_stand_stack_panel": {
+    "type": "stack_panel",
+    "size": [ "100%c", 166 ],
+    "orientation": "horizontal",
+    "controls": [
+      { 
+        "brewing_guide_panel@CrisXolt_Brewing_Guide.brewing_guide_panel": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "brewing_recipe_layout_toggle",
+              "source_property_name": "(#toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      { 
+        "center_fold@CrisXolt_Brewing_Guide_textures.center_fold": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "brewing_recipe_layout_toggle",
+              "source_property_name": "(#toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      { "brewing_stand_panel@brewing_stand_desktop_dx.brewing_stand_panel": { } }
+    ]
+  },
+  
+  /*//// Screen ////*/
+
+  "main_screen_content": {
+    "type": "panel",
+    "controls": [
+      { "container_gamepad_helpers@container_panel_dx.container_gamepad_helpers": {} },
+      { "container_modules@container_panel_dx.container_modules": {} },
+      { "brewing_stand_panel@brewing_stand_desktop_dx.brewing_stand_stack_panel": { } }
+    ]
+  }
+}
