@@ -1,0 +1,22 @@
+{
+    "sticky_piston": {
+        "textures": {
+            "side":"piston_side_sticky"
+        },
+        "sound":"stone",
+        "carried_textures":{
+            "side":"piston_side_sticky"
+        }
+    },
+    "observer": {
+      "textures" : {
+         "down" : "observer_bottom",
+         "side" : "observer_east",
+         "side" : "observer_west",
+         "north" : "observer_north",
+         "south" : "observer_south",
+         "up" : "observer_top"
+      },
+      "sound": "metal"
+    }
+}
