@@ -1,37 +1,68 @@
 {
-  "namespace": "hud",
-  "hud_content": {
-    "modifications": [
-      {
-        "array_name": "controls",
-        "operation": "insert_front",
-        "value": [
-          {"Bolt@Bolt.hotbar_grid": {}}
-        ]
-      }
-    ]
-  },
-  
-  "Inventory_Hud": {
-    "type": "panel",
-    "anchor_from": "top_right",
-    "anchor_to": "top_right",
-    "size": ["50%", "100%"],
-    "controls": [
-      {
-        "label": {
-          "type": "label",
-          "size": ["default", 10],
-          "max_size": ["100%", "100%"],
-          "anchor_from": "top_right",
-          "anchor_to": "top_right",
-          "bindings": [
+    "namespace": "hud",
+    "hud_content": {
+        "modifications": [
             {
-              "binding_name": "#inventory_hud"
+                "array_name": "controls",
+                "operation": "insert_front",
+                "value": [
+                    {
+                        "Bolt@Bolt.hotbar_grid": {}
+                    }
+                ]
             }
-          ]
-        }
-      }
-    ]
-  }
+        ]
+    },
+    "Inventory_Hud": {
+        "type": "panel",
+        "anchor_from": "top_right",
+        "anchor_to": "top_right",
+        "size": ["50%", "100%"],
+        "controls": [
+            {
+                "label": {
+                    "type": "label",
+                    "size": ["default", 10],
+                    "max_size": ["100%", "100%"],
+                    "anchor_from": "top_right",
+                    "anchor_to": "top_right",
+                    "bindings": [
+                        {
+                            "binding_name": "#inventory_hud"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "item_name_text_root/item_text_aligner/item_text_control/item_text_label": {
+        "max_size": [200, 11],
+        "alpha": 0,
+        "clips_children": true,
+        "controls": [
+            {
+                "item_text_label": {
+                    "type": "label",
+                    "max_size": [200, "default"],
+                    "text_alignment": "center",
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "color": "$text_color",
+                    "text": "#text",
+                    "alpha": "@hud.anim_item_name_text_alpha_in",
+                    "enable_profanity_filter": false,
+                    "bindings": [
+                        {
+                            "binding_name": "$text_binding",
+                            "binding_name_override": "#text"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "item_name_text_root/item_text_aligner/item_text_control/item_text_background": {
+        "size": ["100%sm+5px", "100%sm+5px"]
+    }
+
 }
