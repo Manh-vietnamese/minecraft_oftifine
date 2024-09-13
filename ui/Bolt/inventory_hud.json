@@ -93,7 +93,7 @@
       {
         "Bolt_background": {
           "type": "image",
-          "texture": "ui/Bolt/inventory/hud",
+          "texture": "textures/inventory/hud",
           "size": [16.7, 16.7],
           "alpha": 0.59,
           "$durability_bar_required": true,
