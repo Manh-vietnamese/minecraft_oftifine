@@ -4,14 +4,14 @@
     "description": "pack By §3@Chanhne§r",
     "name": "§aresources pack By §c©Chanhne§r ",
     "uuid": "e9a44b22-ecf2-4c5c-8b91-fd1a2d7a9f3e",
-    "version": [ 3, 1, 1 ],
+    "version": [ 1, 2 ,0 ],
     "min_engine_version": [ 1, 21, 0 ]
   },
   "modules": [
     {
         "type": "resources",
         "uuid": "d21d7a8c-d938-49d1-a7b1-90c5e78051a6",
-        "version": [ 3, 1, 1 ]
+        "version": [ 1, 2, 3 ]
     }
   ]
 }
