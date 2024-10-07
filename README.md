@@ -10,7 +10,7 @@ danh sách các tính năng của addon:
         5.  Full grass  
         6.  Khiên thấp  
         7.  Sửa đổi redstone  
-        8.  Xoá bỏ khung hi​⬤
+        8.  Xoá bỏ khung hiển thị emchant  
 
 English Translation: 
 This is an addon specifically for Minecraft Bedrock Edition version 1.21.0 and above, created by me by combining various addons to serve users. Below is the reference code:
