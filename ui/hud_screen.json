@@ -1,40 +1,4 @@
 {
-    "namespace": "hud",
-    "hud_content": {
-        "modifications": [
-            {
-                "array_name": "controls",
-                "operation": "insert_front",
-                "value": [
-                    {
-                        "Bolt@Bolt.hotbar_grid": {}
-                    }
-                ]
-            }
-        ]
-    },
-    "Inventory_Hud": {
-        "type": "panel",
-        "anchor_from": "top_right",
-        "anchor_to": "top_right",
-        "size": ["50%", "100%"],
-        "controls": [
-            {
-                "label": {
-                    "type": "label",
-                    "size": ["default", 10],
-                    "max_size": ["100%", "100%"],
-                    "anchor_from": "top_right",
-                    "anchor_to": "top_right",
-                    "bindings": [
-                        {
-                            "binding_name": "#inventory_hud"
-                        }
-                    ]
-                }
-            }
-        ]
-    },
     "item_name_text_root/item_text_aligner/item_text_control/item_text_label": {
         "max_size": [200, 11],
         "alpha": 0,

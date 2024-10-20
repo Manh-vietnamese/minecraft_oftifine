@@ -1,7 +1,5 @@
 {
 	"ui_defs":[
-		"ui/Bolt/inventory_hud.json",
-		"ui/hud_screen.json",
         "vdx/ui_data/brewing_guide/brewing_guide.uidx",
         "vdx/ui_data/brewing_guide/brewing_item_animation.uidx",
         "vdx/ui_data/brewing_guide/brewing_items.uidx",
