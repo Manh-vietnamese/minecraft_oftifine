@@ -9,6 +9,7 @@
 5. Khiên thấp  
 6. Sửa redstone  
 7. Xóa khung enchant  
+8. hiển thị vật phẩm trao đổi với dân làng
 
 ### English:  
 This is an addon specifically for Minecraft Bedrock Edition version 1.21.0 and above, created by me by combining various addons to serve users. Below is the reference code:
@@ -21,3 +22,4 @@ This is an addon specifically for Minecraft Bedrock Edition version 1.21.0 and a
 5. Low shield  
 6. Modified redstone  
 7. Remove enchantment display frame  
+8. Display items for trade with villagers
