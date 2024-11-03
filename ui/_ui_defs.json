@@ -1,16 +1,17 @@
+// Code được phát triển bởi chanhne, cấm sao chép dưới mọi hình thức khi chưa được cho phép.
+// Code developed by chanhne, copying in any form without permission is prohibitede.
 {
-	"ui_defs":[
-        "vdx/ui_data/brewing_guide/brewing_guide.uidx",
-        "vdx/ui_data/brewing_guide/brewing_item_animation.uidx",
-        "vdx/ui_data/brewing_guide/brewing_items.uidx",
-        "vdx/ui_data/brewing_guide/brewing_lingering_items.uidx",
-        "vdx/ui_data/brewing_guide/brewing_splash_items.uidx",
-        "vdx/ui_data/brewing_guide/brewing_text_animation.uidx",
-        "vdx/ui_data/brewing_guide/potion_item_common.uidx",
-        "vdx/ui_data/brewing_guide/stack_panel_content.uidx",
-        "vdx/ui_data/brewing_guide/textures.uidx",
-        "vdx/ui_data/brewing_guide/ui_template_scroll.uidx",
-        "vdx/ui_data/brewing_guide/ui_template_toggles.uidx"
+    "ui_defs":[
+    "vdx/ui_data/brewing_guide/brewing_guide.uidx",
+    "vdx/ui_data/brewing_guide/brewing_item_animation.uidx",
+    "vdx/ui_data/brewing_guide/brewing_items.uidx",
+    "vdx/ui_data/brewing_guide/brewing_lingering_items.uidx",
+    "vdx/ui_data/brewing_guide/brewing_splash_items.uidx",
+    "vdx/ui_data/brewing_guide/brewing_text_animation.uidx",
+    "vdx/ui_data/brewing_guide/potion_item_common.uidx",
+    "vdx/ui_data/brewing_guide/stack_panel_content.uidx",
+    "vdx/ui_data/brewing_guide/textures.uidx",
+    "vdx/ui_data/brewing_guide/ui_template_scroll.uidx",
+    "vdx/ui_data/brewing_guide/ui_template_toggles.uidx"
     ]
 }
- 

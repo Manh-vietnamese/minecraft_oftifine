@@ -1,14 +1,16 @@
+// Code được phát triển bởi chanhne, cấm sao chép dưới mọi hình thức khi chưa được cho phép.
+// Code developed by chanhne, copying in any form without permission is prohibitede.
 {
-  "format_version": "1.8.0",
-  "minecraft:client_entity": {
-    "description": {
-      "identifier": "minecraft:shield",
-      "textures": {
-        "default": "textures/entity/shield"
-      },
-      "geometry": {
-        "default": "geometry.shield"
-      }
+    "format_version": "1.8.0",
+        "minecraft:client_entity": {
+            "description": {
+            "identifier": "minecraft:shield",
+                "textures": {
+                "default": "textures/entity/shield"
+            },
+                "geometry": {
+                "default": "geometry.shield"
+            }
+        }
     }
-  }
 }

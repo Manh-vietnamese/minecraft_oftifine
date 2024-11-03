@@ -1,3 +1,6 @@
+// Code được phát triển bởi chanhne, cấm sao chép dưới mọi hình thức khi chưa được cho phép.
+// Code developed by chanhne, copying in any form without permission is prohibited.
+
 {
     "item_name_text_root/item_text_aligner/item_text_control/item_text_label": {
         "max_size": [200, 11],
@@ -28,5 +31,4 @@
     "item_name_text_root/item_text_aligner/item_text_control/item_text_background": {
         "size": ["100%sm+5px", "100%sm+5px"]
     }
-
 }

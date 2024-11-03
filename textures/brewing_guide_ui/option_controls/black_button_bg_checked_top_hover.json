@@ -1,4 +1,6 @@
+// Code được phát triển bởi chanhne, cấm sao chép dưới mọi hình thức khi chưa được cho phép.
+// Code developed by chanhne, copying in any form without permission is prohibitede.
 {
-  "nineslice_size": 2,
-  "base_size": [ 8, 8 ]
+    "nineslice_size": 2,
+    "base_size": [ 8, 8 ]
 }
